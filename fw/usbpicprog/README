@@ -1,0 +1,12 @@
+USBPICPROG FW
+=============
+
+The shared location to put new PIC devices XML profiles is:
+<p><b> /usr/share/usbpicprog/ <b/></p>
+
+<br/><br/>
+The following devices have been given support within the project:
+<ul>
+    <li>PIC16 F 1615</li>
+    <li>PIC16 F 1705</li>
+</ul>

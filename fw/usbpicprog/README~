@@ -1,0 +1,5 @@
+USBPICPROG FW
+=============
+
+The shared location to put new PIC devices XML profiles is:
+<p><b> /usr/share/usbpicprog/ <b/></p>
