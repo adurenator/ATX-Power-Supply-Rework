@@ -1,9 +1,12 @@
-_initDisplay: CODE, 2018 0 1
-_initGpios: CODE, 2019 0 1
-_main: CODE, 2021 0 19
+_initDisplay: CODE, 1950 0 1
+_initGpios: CODE, 1951 0 1
+_readAdcSample: CODE, 1974 0 12
+_readAdcChannel: CODE, 1986 0 14
+_main: CODE, 2000 0 19
+_configAdcChannel: CODE, 1962 0 12
 __initialization: CODE, 2040 0 4
-_voltageMeasureTask: CODE, 2020 0 1
-_initADC: CODE, 2017 0 1
-_displayRefreshTask: CODE, 2016 0 1
-_currentMeasureTask: CODE, 2015 0 1
-Total: 29
+_voltageMeasureTask: CODE, 1952 0 10
+_initADC: CODE, 2019 0 21
+_displayRefreshTask: CODE, 1949 0 1
+_currentMeasureTask: CODE, 1948 0 1
+Total: 96

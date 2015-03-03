@@ -1,6 +1,7 @@
 
 #include <stdint.h>
 #include "tasks.h"
+#include "hal_adc.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -22,6 +23,7 @@ uint16_t current;
 
 void voltageMeasureTask( void )
 {
+    uint16_t anVoltage = readAdcChannel( ADC_CH0 );
 
 }
 
