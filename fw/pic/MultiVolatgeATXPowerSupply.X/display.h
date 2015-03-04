@@ -12,7 +12,14 @@
 extern "C" {
 #endif
 
-    void initDisplay( void );
+
+    void initDisplays( void );
+
+    void displayOn( uint8_t displayId );
+
+    void displayOff( uint8_t displayId );
+
+    void displayShow( uint8_t num, uint8_t displayId );
 
 
 #ifdef	__cplusplus

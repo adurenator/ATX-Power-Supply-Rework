@@ -36,5 +36,7 @@ void currentMeasureTask( void )
 
 void displayRefreshTask( void )
 {
+	// TODO determine whether it is time to switch to another digit
 
+		// TODO if so, show next digit
 }
