@@ -9,6 +9,7 @@
       <itemPath>display.h</itemPath>
       <itemPath>16F1615_config.h</itemPath>
       <itemPath>tasks.h</itemPath>
+      <itemPath>display_tables.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

@@ -5,14 +5,7 @@
  * Created on February 23, 2015, 12:06 AM
  */
 
-#include <xc.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-
-#include "pic16f1615.h"
 #include "16F1615_config.h"
-
 #include "hal_gpios.h"
 #include "hal_adc.h"
 #include "display.h"
@@ -21,7 +14,7 @@
 /*
  * 
  */
-int main(int argc, char** argv)
+int main( int argc, char** argv )
 {
     // Initialize gpios with proper configuration
     initGpios();
@@ -30,7 +23,7 @@ int main(int argc, char** argv)
     initADC();
 
     // Initialize 7segment displays
-    initDisplay();
+    initDisplays();
 
     // Start infinite loop.
     // TODO: Some scheduler that executes tasks periodically ?
@@ -46,6 +39,6 @@ int main(int argc, char** argv)
         displayRefreshTask();
     }
 
-    return (EXIT_SUCCESS);
+    return (0);
 }
 

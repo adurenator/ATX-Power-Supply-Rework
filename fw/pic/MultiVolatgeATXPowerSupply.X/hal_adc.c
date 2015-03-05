@@ -1,6 +1,5 @@
 
 #include "hal_adc.h"
-#include <xc.h>
 #include "pic16f1615.h"
 
 

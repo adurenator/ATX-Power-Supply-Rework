@@ -11,6 +11,8 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+    
+    #include <stdint.h>
 
 
     void initDisplays( void );
