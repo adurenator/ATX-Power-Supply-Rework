@@ -1,14 +1,16 @@
-_initGpios: CODE, 1930 0 1
-_initDisplays: CODE, 1947 0 11
-_readAdcSample: CODE, 1970 0 12
+_initGpios: CODE, 1697 0 1
+_initDisplays: CODE, 1809 0 228
+_readAdcSample: CODE, 1726 0 12
 _segment7_hexa_BE: STRCODE, 2048 0 16
 _segment7_hexa_LE: STRCODE, 2064 0 16
-_readAdcChannel: CODE, 1982 0 14
-_main: CODE, 1996 0 19
-_configAdcChannel: CODE, 1958 0 12
-__initialization: CODE, 2036 0 8
-_voltageMeasureTask: CODE, 1937 0 10
-_initADC: CODE, 2015 0 21
-_displayRefreshTask: CODE, 1929 0 1
-_currentMeasureTask: CODE, 1928 0 1
-Total: 142
+_readAdcChannel: CODE, 1738 0 14
+_main: CODE, 1769 0 19
+_configAdcChannel: CODE, 1714 0 12
+__initialization: CODE, 2037 0 7
+_voltageMeasureTask: CODE, 1704 0 10
+_initADC: CODE, 1788 0 21
+_displayRefreshTask: CODE, 1695 0 1
+_currentMeasureTask: CODE, 1694 0 1
+_shiftRegSerialDecoderConfig: CODE, 1696 0 1
+___bmul: CODE, 1752 0 17
+Total: 376
