@@ -7,11 +7,33 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// Macros
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#define ADD_LINE(ID, PORT, PIN)	\
+	lines[ID].reg    = &PORT; 	\
+    lines[ID].pin    = PIN;
+
+#define ADD_CONTROLLER(ID, CLK, LATCH, RST, TYPE, FUNC)	\
+	controllers[ID].id 				= ID; 		\
+	controllers[ID].clk 			= CLK; 		\
+	controllers[ID].latch 			= LATCH; 	\
+	controllers[ID].reset 			= RST; 		\
+	controllers[ID].type			= TYPE; 	\
+	controllers[ID].displayConfigure = FUNC;
+
+#define ADD_CONTROLLER_LINE(INDEX, ID, LINE)	\
+	controllers[INDEX].data[ID] = LINE;
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // Private Variables
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#define SEG7_NUM_LINES          5
+#define SEG7_NUM_LINES          12
 #define SEG7_NUM_CONTROLLERS    1
 #define SEG7_NUM_DISPLAYS       4
 #define MAX_7SEGMENT_GPIO_NUM   8
@@ -99,13 +121,25 @@ void bitClear( uint8_t *reg, uint8_t bitNum );
 
 void initDisplays( void )
 {
-    // TODO init lines
-    // RA0
-    lines[0].reg    = &PORTA;
-    lines[0].pin    = 0;
+	// Initialize lines
+	ADD_LINE( 0, PORTA, 0 ); // RA0
+	ADD_LINE( 1, PORTA, 1 ); // RA1
+	ADD_LINE( 2, PORTA, 2 ); // RA2
+	ADD_LINE( 3, PORTA, 3 ); // RA3
+	ADD_LINE( 4, PORTA, 4 ); // RA4
+	ADD_LINE( 5, PORTA, 5 ); // RA5
+
+	ADD_LINE( 6, PORTA, 0 ); // RC0
+	ADD_LINE( 7, PORTC, 1 ); // RC1
+	ADD_LINE( 8, PORTC, 2 ); // RC2
+	ADD_LINE( 9, PORTC, 3 ); // RC3
+	ADD_LINE( 10, PORTC, 4 ); // RC4
+	ADD_LINE( 11, PORTC, 5 ); // RC5
+
 
     // TODO init controllers
-    controllers[0].displayConfigure = shiftRegSerialConfig;
+	ADD_CONTROLLER( 0, NULL, NULL, NULL, SEG7_CTRL_TYPE_SHIFT_REG, shiftRegSerialConfig );
+		ADD_CONTROLLER_LINE( index, 0, & );
 
     // TODO init displays
 
